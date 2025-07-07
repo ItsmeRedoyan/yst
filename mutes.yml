@@ -1,0 +1,3 @@
+# SoulEssentials Mutes Data
+# This file stores muted players information
+# Format: UUID -> reason, muted-by, muted-at
