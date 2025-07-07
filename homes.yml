@@ -1,0 +1,3 @@
+# SoulEssentials Homes Data
+# This file stores player home locations
+# Format: UUID -> world, x, y, z, yaw, pitch
