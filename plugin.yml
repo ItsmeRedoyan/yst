@@ -1,0 +1,163 @@
+name: SoulEssentials
+version: 1.0.0
+main: com.soulbraze.soulessentials.SoulEssentials
+api-version: 1.21
+author: Soul Braze
+description: A comprehensive utility plugin providing essential commands, administrative tools, and enhanced player experiences.
+softdepend: [ViaVersion, ViaBackwards]
+
+commands:
+  home:
+    description: Teleport to your saved home
+    usage: /home
+    permission: soulessentials.home
+    permission-message: "&cYou don't have permission to use this command!"
+  sethome:
+    description: Set your home location
+    usage: /sethome
+    permission: soulessentials.sethome
+    permission-message: "&cYou don't have permission to use this command!"
+  spawn:
+    description: Teleport to world spawn
+    usage: /spawn
+    permission: soulessentials.spawn
+    permission-message: "&cYou don't have permission to use this command!"
+  setspawn:
+    description: Set the world spawn location
+    usage: /setspawn
+    permission: soulessentials.setspawn
+    permission-message: "&cYou don't have permission to use this command!"
+  afk:
+    description: Toggle AFK mode
+    usage: /afk [reason]
+    permission: soulessentials.afk
+    permission-message: "&cYou don't have permission to use this command!"
+  mute:
+    description: Mute a player
+    usage: /mute <player> [reason]
+    permission: soulessentials.mute
+    permission-message: "&cYou don't have permission to use this command!"
+  unmute:
+    description: Unmute a player
+    usage: /unmute <player>
+    permission: soulessentials.unmute
+    permission-message: "&cYou don't have permission to use this command!"
+  welcome:
+    description: Send a welcome message to a player
+    usage: /welcome <player>
+    permission: soulessentials.welcome
+    permission-message: "&cYou don't have permission to use this command!"
+  tpa:
+    description: Send a teleport request to a player
+    usage: /tpa <player>
+    permission: soulessentials.tpa
+    permission-message: "&cYou don't have permission to use this command!"
+  tpaaccept:
+    description: Accept a teleport request
+    usage: /tpaaccept [player]
+    permission: soulessentials.tpaaccept
+    permission-message: "&cYou don't have permission to use this command!"
+  tpacancel:
+    description: Cancel a teleport request
+    usage: /tpacancel [player]
+    permission: soulessentials.tpacancel
+    permission-message: "&cYou don't have permission to use this command!"
+  rtp:
+    description: Random teleport to a safe location
+    usage: /rtp
+    permission: soulessentials.rtp
+    permission-message: "&cYou don't have permission to use this command!"
+  scoreboard:
+    description: Toggle scoreboard display
+    usage: /scoreboard
+    permission: soulessentials.scoreboard
+    permission-message: "&cYou don't have permission to use this command!"
+  bossbar:
+    description: Send a boss bar announcement
+    usage: /bossbar <message>
+    permission: soulessentials.bossbar
+    permission-message: "&cYou don't have permission to use this command!"
+  pl:
+    description: List plugins (blocked for non-OP)
+    usage: /pl
+  plugins:
+    description: List plugins (blocked for non-OP)
+    usage: /plugins
+  soulessentials:
+    description: Main plugin command
+    usage: /soulessentials [reload]
+    permission: soulessentials.admin
+    permission-message: "&cYou don't have permission to use this command!"
+    aliases: [se, soul]
+  znpcs:
+    description: NPC management commands
+    usage: /znpcs <subcommand>
+    permission: soulessentials.npc.use
+    permission-message: "&cYou don't have permission to use this command!"
+
+permissions:
+  soulessentials.*:
+    description: Gives access to all SoulEssentials commands
+    children:
+      soulessentials.home: true
+      soulessentials.sethome: true
+      soulessentials.spawn: true
+      soulessentials.setspawn: true
+      soulessentials.afk: true
+      soulessentials.mute: true
+      soulessentials.unmute: true
+      soulessentials.welcome: true
+      soulessentials.tpa: true
+      soulessentials.tpaaccept: true
+      soulessentials.tpacancel: true
+      soulessentials.rtp: true
+      soulessentials.scoreboard: true
+      soulessentials.bossbar: true
+      soulessentials.admin: true
+      soulessentials.npc.*: true
+  soulessentials.player:
+    description: Basic player permissions
+    default: true
+    children:
+      soulessentials.home: true
+      soulessentials.sethome: true
+      soulessentials.spawn: true
+      soulessentials.afk: true
+      soulessentials.welcome: true
+      soulessentials.tpa: true
+      soulessentials.tpaaccept: true
+      soulessentials.tpacancel: true
+      soulessentials.rtp: true
+      soulessentials.scoreboard: true
+  soulessentials.admin:
+    description: Admin permissions
+    default: op
+    children:
+      soulessentials.mute: true
+      soulessentials.unmute: true
+      soulessentials.setspawn: true
+      soulessentials.bossbar: true
+      soulessentials.npc.*: true
+  soulessentials.npc.*:
+    description: All NPC permissions
+    children:
+      soulessentials.npc.use: true
+      soulessentials.npc.create: true
+      soulessentials.npc.remove: true
+      soulessentials.npc.edit: true
+      soulessentials.npc.admin: true
+  soulessentials.npc.use:
+    description: Basic NPC usage
+    default: op
+  soulessentials.npc.create:
+    description: Create NPCs
+    default: op
+  soulessentials.npc.remove:
+    description: Remove NPCs
+    default: op
+  soulessentials.npc.edit:
+    description: Edit NPCs
+    default: op
+  soulessentials.npc.admin:
+    description: Full NPC administration
+    default: op
