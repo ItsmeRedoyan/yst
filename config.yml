@@ -1,0 +1,166 @@
+# SoulEssentials Configuration File
+# Author: Soul Braze
+# Version: 1.0.0
+
+# General Plugin Settings
+plugin:
+  # Enable debug mode for troubleshooting
+  debug: false
+  # Plugin prefix for messages
+  prefix: "&8[&6SoulEssentials&8]&r "
+
+# Home System Configuration
+home:
+  # Enable home system
+  enabled: true
+  # Teleport delay in seconds (0 = instant)
+  teleport-delay: 3
+  # Cancel teleport on movement
+  cancel-on-move: true
+  # Cancel teleport on damage
+  cancel-on-damage: true
+
+# Spawn System Configuration
+spawn:
+  # Enable spawn system
+  enabled: true
+  # Teleport delay in seconds (0 = instant)
+  teleport-delay: 5
+  # Cancel teleport on movement
+  cancel-on-move: true
+  # Cancel teleport on damage
+  cancel-on-damage: true
+  # Teleport to spawn on first join
+  teleport-on-first-join: true
+
+# AFK System Configuration
+afk:
+  # Enable AFK system
+  enabled: true
+  # Auto AFK time in seconds (0 = disabled)
+  auto-afk-time: 300
+  # Kick AFK players after this time in seconds (0 = disabled)
+  kick-time: 1800
+  # Broadcast AFK status changes
+  broadcast-status: true
+
+# Mute System Configuration
+mute:
+  # Enable mute system
+  enabled: true
+  # Broadcast mute/unmute actions
+  broadcast-actions: true
+  # Muted players can use these commands
+  allowed-commands:
+    - "/msg"
+    - "/tell"
+    - "/r"
+    - "/reply"
+
+# TPA System Configuration
+tpa:
+  # Enable TPA system
+  enabled: true
+  # TPA request timeout in seconds
+  request-timeout: 60
+  # Teleport delay in seconds (0 = instant)
+  teleport-delay: 3
+  # Cancel teleport on movement
+  cancel-on-move: true
+  # Cancel teleport on damage
+  cancel-on-damage: true
+
+# RTP System Configuration
+rtp:
+  # Enable RTP system
+  enabled: true
+  # Maximum distance from spawn for RTP
+  max-distance: 10000
+  # Minimum distance from spawn for RTP
+  min-distance: 100
+  # RTP cooldown in seconds
+  cooldown: 300
+  # Teleport delay in seconds (0 = instant)
+  teleport-delay: 5
+  # Safe biomes for RTP
+  safe-biomes:
+    - "PLAINS"
+    - "FOREST"
+    - "BIRCH_FOREST"
+    - "DARK_FOREST"
+    - "TAIGA"
+    - "SAVANNA"
+    - "SUNFLOWER_PLAINS"
+    - "FLOWER_FOREST"
+  # Unsafe biomes to avoid
+  unsafe-biomes:
+    - "OCEAN"
+    - "DEEP_OCEAN"
+    - "LAVA_OCEAN"
+    - "NETHER_WASTES"
+    - "THE_END"
+    - "VOID"
+
+# Scoreboard Configuration
+scoreboard:
+  # Enable scoreboard system
+  enabled: true
+  # Scoreboard title
+  title: "&6&lSoulEssentials"
+  # Update interval in ticks (20 ticks = 1 second)
+  update-interval: 20
+  # Scoreboard lines (supports placeholders)
+  lines:
+    - "&7&m─────────────────"
+    - "&fPlayer: &a{player}"
+    - "&fOnline: &a{online}"
+    - "&fTPS: &a{tps}"
+    - "&fPing: &a{ping}ms"
+    - "&7&m─────────────────"
+
+# Boss Bar Configuration
+bossbar:
+  # Enable boss bar system
+  enabled: true
+  # Default boss bar color (BLUE, GREEN, PINK, PURPLE, RED, WHITE, YELLOW)
+  color: "BLUE"
+  # Default boss bar style (SOLID, SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20)
+  style: "SOLID"
+  # Display duration in seconds
+  duration: 10
+
+# Anti-Spam Configuration
+anti-spam:
+  # Enable anti-spam system
+  enabled: true
+  # Block URLs/links
+  block-urls: true
+  # Block server IPs
+  block-ips: true
+  # Message similarity threshold (0.0 - 1.0)
+  similarity-threshold: 0.8
+  # Spam detection time window in seconds
+  time-window: 10
+  # Maximum messages per time window
+  max-messages: 5
+  # Allowed domains (whitelist)
+  allowed-domains:
+    - "youtube.com"
+    - "youtu.be"
+    - "discord.gg"
+
+# Plugin Privacy Configuration
+plugin-privacy:
+  # Enable plugin privacy (block /pl and /plugins for non-OP)
+  enabled: true
+  # Custom message when blocked
+  blocked-message: "&cYou don't have permission to view plugins!"
+
+# Cross-Version Support
+cross-version:
+  # Enable ViaVersion integration
+  viaversion-integration: true
+  # Enable ViaBackwards integration
+  viabackwards-integration: true
+  # Show version info in scoreboard
+  show-version-info: true
