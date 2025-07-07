@@ -1,0 +1,142 @@
+# SoulEssentials Messages Configuration
+# Author: Soul Braze
+# Version: 1.0.0
+# Color codes: &0-&9, &a-&f, &k-&o, &r
+# Placeholders: {player}, {target}, {reason}, {time}, etc.
+
+# General Messages
+general:
+  prefix: "&8[&6SoulEssentials&8]&r "
+  no-permission: "&cYou don't have permission to use this command!"
+  player-not-found: "&cPlayer '{player}' not found!"
+  player-not-online: "&cPlayer '{player}' is not online!"
+  only-players: "&cThis command can only be used by players!"
+  invalid-usage: "&cInvalid usage! Use: {usage}"
+  reload-success: "&aConfiguration reloaded successfully!"
+  teleport-cancelled: "&cTeleport cancelled!"
+  teleport-countdown: "&eTeleporting in {time} seconds... Don't move!"
+
+# Home System Messages
+home:
+  set-success: "&aHome set successfully!"
+  teleport-success: "&aWelcome home!"
+  no-home: "&cYou don't have a home set! Use /sethome to set one."
+  teleport-delay: "&eTeleporting to home in {time} seconds..."
+
+# Spawn System Messages
+spawn:
+  set-success: "&aSpawn location set successfully!"
+  teleport-success: "&aWelcome to spawn!"
+  teleport-delay: "&eTeleporting to spawn in {time} seconds..."
+  no-spawn: "&cSpawn location not set!"
+
+# AFK System Messages
+afk:
+  now-afk: "&7{player} is now AFK"
+  now-afk-reason: "&7{player} is now AFK: {reason}"
+  no-longer-afk: "&7{player} is no longer AFK"
+  auto-afk: "&7You are now automatically AFK due to inactivity"
+  kick-message: "&cYou have been kicked for being AFK too long!"
+
+# Mute System Messages
+mute:
+  muted: "&cYou have been muted!"
+  muted-reason: "&cYou have been muted! Reason: {reason}"
+  unmuted: "&aYou have been unmuted!"
+  already-muted: "&cPlayer '{player}' is already muted!"
+  not-muted: "&cPlayer '{player}' is not muted!"
+  mute-broadcast: "&c{player} has been muted by {admin}"
+  mute-broadcast-reason: "&c{player} has been muted by {admin} for: {reason}"
+  unmute-broadcast: "&a{player} has been unmuted by {admin}"
+  cannot-chat: "&cYou are muted and cannot chat!"
+  cannot-command: "&cYou are muted and cannot use this command!"
+
+# Welcome System Messages
+welcome:
+  message: "&6Welcome to the server, {player}! &eEnjoy your stay!"
+  sent: "&aWelcome message sent to {player}!"
+
+# TPA System Messages
+tpa:
+  request-sent: "&aTeleport request sent to {player}!"
+  request-received: "&e{player} wants to teleport to you. Use /tpaaccept to accept or wait {time} seconds for it to expire."
+  request-accepted: "&aTeleport request accepted! Teleporting..."
+  request-expired: "&cTeleport request from {player} has expired!"
+  no-pending-requests: "&cYou have no pending teleport requests!"
+  request-cancelled: "&cTeleport request cancelled!"
+  teleport-success: "&aTeleported successfully!"
+  teleport-delay: "&eTeleporting in {time} seconds..."
+  cannot-request-self: "&cYou cannot send a teleport request to yourself!"
+  already-pending: "&cYou already have a pending request with {player}!"
+
+# RTP System Messages
+rtp:
+  searching: "&eSearching for a safe location..."
+  success: "&aRandomly teleported to a safe location!"
+  failed: "&cCould not find a safe location. Please try again later."
+  cooldown: "&cYou must wait {time} seconds before using RTP again!"
+  teleport-delay: "&eTeleporting in {time} seconds..."
+  unsafe-world: "&cRandom teleport is not available in this world!"
+
+# Scoreboard Messages
+scoreboard:
+  enabled: "&aScoreboard enabled!"
+  disabled: "&cScoreboard disabled!"
+  title: "&6&lSoulEssentials"
+
+# Boss Bar Messages
+bossbar:
+  sent: "&aBoss bar message sent!"
+  invalid-color: "&cInvalid boss bar color! Available: BLUE, GREEN, PINK, PURPLE, RED, WHITE, YELLOW"
+  invalid-style: "&cInvalid boss bar style! Available: SOLID, SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20"
+
+# Anti-Spam Messages
+anti-spam:
+  url-blocked: "&cLinks are not allowed in chat!"
+  ip-blocked: "&cServer IPs are not allowed in chat!"
+  spam-detected: "&cPlease slow down your messages!"
+  similar-message: "&cYou cannot send similar messages so quickly!"
+
+# Plugin Privacy Messages
+plugin-privacy:
+  blocked: "&cYou don't have permission to view plugins!"
+
+# NPC System Messages
+npc:
+  created: "&aNPC '{name}' created successfully!"
+  removed: "&aNPC '{name}' removed successfully!"
+  not-found: "&cNPC '{name}' not found!"
+  already-exists: "&cNPC '{name}' already exists!"
+  create-failed: "&cFailed to create NPC!"
+  remove-failed: "&cFailed to remove NPC!"
+  moved: "&aNPC '{name}' moved to your location!"
+  move-failed: "&cFailed to move NPC!"
+  teleported: "&aTeleported to NPC '{name}'!"
+  skin-set: "&aNPC '{name}' skin set to '{skin}'!"
+  skin-failed: "&cFailed to set NPC skin!"
+  type-set: "&aNPC '{name}' type set to '{type}'!"
+  type-failed: "&cFailed to set NPC type!"
+  hologram-set: "&aNPC '{name}' hologram set!"
+  hologram-removed: "&aNPC '{name}' hologram removed!"
+  hologram-failed: "&cFailed to set NPC hologram!"
+  hologram-remove-failed: "&cFailed to remove NPC hologram!"
+  command-set: "&aNPC '{name}' command set!"
+  server-set: "&aNPC '{name}' server set to '{server}'!"
+  id-set: "&aNPC '{name}' ID set to {id}!"
+  id-failed: "&cFailed to set NPC ID! ID may already be in use."
+  invalid-id: "&cInvalid ID! Please enter a valid number."
+  look-enabled: "&aNPC '{name}' will now look at players!"
+  look-disabled: "&cNPC '{name}' will no longer look at players!"
+  no-npcs: "&cNo NPCs found!"
+  list-header: "&6&lNPC List:"
+  info-header: "&6&lNPC Information for '{name}':"
+  help-header: "&6&lNPC Commands Help:"
+
+# Error Messages
+errors:
+  config-error: "&cError loading configuration file!"
+  database-error: "&cDatabase error occurred!"
+  command-error: "&cAn error occurred while executing the command!"
+  teleport-error: "&cTeleport failed! Please try again."
+  world-not-found: "&cWorld '{world}' not found!"
+  location-unsafe: "&cDestination location is unsafe!"
